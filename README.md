@@ -141,6 +141,8 @@ python ThresholdEditorGUIHsv.py demo-pic.png
 
 ![色块识别](./IMG/色块识别演示样例.png)
 
+如果用opencv4.0版本以上的把 ’color_feature.py‘和’test_color_feature.py‘里面的 “bimg, contours, hier = cv2.findContours(img_bin, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)”改为:tmp = cv2.findContours(img_bin,cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
+                              contours = tmp[0] if len(tmp) == 2 else tmp[1]
 
 
 **脚本使用方法**
